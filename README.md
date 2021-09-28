@@ -5,4 +5,3 @@ This course will walk you through writing your first action and using it with a 
 **Ready to get started? Navigate to the first issue.**
 
 added feature 2
-added feature 3
