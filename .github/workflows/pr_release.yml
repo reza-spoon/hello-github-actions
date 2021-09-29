@@ -2,6 +2,8 @@ name: PR run
 
 on :
   create:
+    paths:
+      - '**/release-**'
 
 jobs:
   build:
