@@ -1,7 +1,7 @@
 name: PR run
 
 on :
-  create:
+  repository-dispatch:
 
 jobs:
   build:
