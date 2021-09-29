@@ -1,6 +1,6 @@
 name: PR release
 on :
-  create:
+  createx:
     reg:
       - '**/release-**'
 
