@@ -1,0 +1,16 @@
+name: PR run
+
+on :
+  created:
+    branches: [release-*]
+
+jobs:
+  build:
+    name: Hello world action
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+        run: |
+          "echo release detected"
+
+
