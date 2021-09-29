@@ -1,7 +1,7 @@
 name: PR run
 
 on :
-  created:
+  create:
     branches: [release-*]
 
 jobs:
