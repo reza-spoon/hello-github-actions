@@ -1,5 +1,4 @@
 name: PR release
-
 on :
   create:
     paths:
