@@ -2,7 +2,6 @@ name: PR run
 
 on :
   create:
-    branches: [release-*]
 
 jobs:
   build:
