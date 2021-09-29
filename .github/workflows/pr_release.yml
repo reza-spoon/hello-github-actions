@@ -1,0 +1,16 @@
+name: PR run
+
+on :
+  repository-dispatch:
+
+jobs:
+  build:
+    name: Release detection
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - name: Bash commands
+        run: |
+          "echo release detected"
+
+
