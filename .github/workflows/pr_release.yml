@@ -12,6 +12,6 @@ jobs:
       - uses: actions/checkout@v1
       - name: Bash commands
         run: |
-          echo release detected
+          echo release detected (new)
 
 
