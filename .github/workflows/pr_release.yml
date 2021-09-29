@@ -1,7 +1,7 @@
 name: PR release
 on :
-  createx:
-    reg:
+  create:
+    branches:
       - '**/release-**'
 
 jobs:
