@@ -1,9 +1,6 @@
 name: PR release
 on :
   create:
-    paths:
-    ref:
-      - '**/release-**'
 
 jobs:
   build:
@@ -14,5 +11,6 @@ jobs:
       - name: Bash commands
         run: |
           echo "release detected (new)"
+          echo {{ github.ref }}
 
 
