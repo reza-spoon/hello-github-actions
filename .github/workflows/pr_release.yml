@@ -1,7 +1,7 @@
-name: PR run
+name: PR release
 
 on :
-  create:
+  repository_dispatch:
 
 jobs:
   build:
