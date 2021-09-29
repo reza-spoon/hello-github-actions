@@ -11,6 +11,6 @@ jobs:
       - name: Bash commands
         run: |
           echo "release detected (new)"
-          echo {{ github.ref }}
+          echo ${{ github.ref }}
 
 
