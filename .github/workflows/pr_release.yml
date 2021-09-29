@@ -1,7 +1,9 @@
 name: PR release
 
 on :
-  repository_dispatch:
+  create:
+    paths:
+      - '**/release-**'
 
 jobs:
   build:
