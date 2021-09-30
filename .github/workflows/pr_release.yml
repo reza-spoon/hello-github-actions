@@ -5,8 +5,8 @@ on :
       - main
 
 jobs:
-  if: contains(github.ref, 'release/')
   build:
+    if: contains(github.ref, 'release/')
     name: Release detection
     runs-on: ubuntu-latest
     steps:
