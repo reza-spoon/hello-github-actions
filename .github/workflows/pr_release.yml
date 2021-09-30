@@ -2,14 +2,14 @@ name: PR release
 on :
   pull_request:
     branches:
-      - 'main'
+      - main
 
 jobs:
   build:
-    if: contains(github.ref, 'release/')
     name: Release detection
     runs-on: ubuntu-latest
     steps:
+      if: contains(github.ref, 'release/')
       - uses: actions/checkout@v1
       - name: Bash commands
         run: |
