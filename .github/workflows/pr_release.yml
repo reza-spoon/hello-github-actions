@@ -5,9 +5,9 @@ on :
       - main
 
 jobs:
+  if: contains(github.ref, 'release/')
   build:
     name: Release detection
-    if: contains(github.ref, 'release/')
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
