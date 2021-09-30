@@ -1,9 +1,9 @@
 name: PR release
 on :
   workflow_dispatch:
-  pull_request:
+  pull_request_target:
     branches:
-      - main
+      - 'release/**'
 
 jobs:
   build:
@@ -12,9 +12,9 @@ jobs:
     steps:
       - name: Bash commands
         run: |
-          echo ${{ github.event.pull_request.head.ref }}
+          echo ${{ github.base_ref }}
       - name: Relase detector
-        if: contains(github.event.pull_request.head.ref, 'release/')
+        if: contains(github.base_ref, 'main')
         run: |
           echo "release detected (new)" 
 
