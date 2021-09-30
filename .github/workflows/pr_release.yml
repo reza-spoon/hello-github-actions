@@ -2,10 +2,11 @@ name: PR release
 on :
   pull_request:
     branches:
-      - 'release/**'
+      - 'main'
 
 jobs:
   build:
+    if: contains(github.ref, 'release/')
     name: Release detection
     runs-on: ubuntu-latest
     steps:
