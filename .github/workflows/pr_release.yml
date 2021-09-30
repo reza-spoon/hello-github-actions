@@ -1,7 +1,8 @@
 name: PR release
 on :
   pull_request:
-
+    branches: 
+      - 'release/*'
 
 jobs:
   build:
