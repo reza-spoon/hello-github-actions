@@ -9,9 +9,9 @@ jobs:
     name: Release detection
     runs-on: ubuntu-latest
     steps:
-      if: contains(github.ref, 'release/')
       - uses: actions/checkout@v1
       - name: Bash commands
+      if: contains(github.ref, 'release/')
         run: |
           echo "release detected (new)"
           echo ${{ github.ref }}
