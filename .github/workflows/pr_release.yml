@@ -12,9 +12,9 @@ jobs:
     steps:
       - name: Bash commands
         run: |
-          echo ${{ github.base_ref }}
+          echo ${{ github.event.pull_request.head.ref }}
       - name: Relase detector
-        if: contains(github.base_ref, 'release/')
+        if: contains(github.event.pull_request.head.ref, 'release/')
         run: |
           echo "release detected (new)" 
 
