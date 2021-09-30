@@ -1,6 +1,8 @@
 name: PR release
 on :
-  create:
+  pull_request:
+    paths:
+        - 'release/*'
 
 jobs:
   build:
@@ -9,7 +11,6 @@ jobs:
     steps:
       - uses: actions/checkout@v1
       - name: Bash commands
-        if: contains(github.ref, '/release-')
         run: |
           echo "release detected (new)"
           echo ${{ github.ref }}
