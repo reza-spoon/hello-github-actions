@@ -8,13 +8,12 @@ on :
 jobs:
   build:
     name: Release detection
-    if: contains(github.ref, 'release/')
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v1
       - name: Bash commands
         run: |
-          echo "release detected (new)"
-          echo ${{ github.ref }}
-
-
+          echo ${{ github.event.pull_request.head.ref }}
+      - name: Relase detector
+        if: contains(github.event.pull_request.head.ref, 'release/')
+        run: |
+          echo "release detected (new)" 
